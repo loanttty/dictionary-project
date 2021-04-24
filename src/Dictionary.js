@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Result from "./Result";
 
 export default function Dictionary () {
 	let [keyword, setKeyword] = useState('')
+	let [results, setResults] = useState(null)
 
 	function updateKeyword (e) {
 		setKeyword(e.target.value)
 	}
 
 	function handleResponse (response) {
-		console.log(response)
+		setResults(response.data[0])
 	}
 
 	function search (e) {
@@ -26,6 +28,7 @@ export default function Dictionary () {
 						autoFocus={true}
 						onChange={updateKeyword} />
 					</form>
+					<Result results={results}/>
 			</div>
 	)
 }
