@@ -1,4 +1,3 @@
-import react from "react"
 
 export default function Phonetics (props) {
     console.log(props)
@@ -8,7 +7,7 @@ export default function Phonetics (props) {
                 {props.phonetics.map((item, index) => (
                     <li key={index}>
                         {item.text}
-                        <a href={item.audio} target="_blank">Listen</a>
+                        <a href={item.audio} target="_blank" rel="noreferrer">Listen</a>
                     </li>
                 ))}
             </ul>
