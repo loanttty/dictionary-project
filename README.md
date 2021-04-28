@@ -1,17 +1,19 @@
-# Dictionary Project
+# Dictionary React Project
 
 This is a dictionary application with these functionalities below:
-1. 
-2. Search Page
+
+1. Search for the meaning, synonyms and relevant images of word typed in
+2. Search for the meaning of synonyms when they get clicked upon
 
 ## TL;DR
 
 To get started right away:
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+- install all project dependencies with `npm install`
+- start the development server with `npm start`
 
 ## What You're Getting
+
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
