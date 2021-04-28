@@ -1,13 +1,14 @@
 
 export default function Phonetics (props) {
-    console.log(props)
     return (
         <div className='phonetics'>
             <ul>
                 {props.phonetics.map((item, index) => (
                     <li key={index}>
+                        <a href={item.audio} className="listenButton" target="_blank" rel="noreferrer">
+                            <i className="fas fa-volume-up"></i>
+                        </a>
                         {item.text}
-                        <a href={item.audio} target="_blank" rel="noreferrer">Listen</a>
                     </li>
                 ))}
             </ul>

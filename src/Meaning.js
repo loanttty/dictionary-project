@@ -1,22 +1,26 @@
-import React from 'react'
+import React from 'react';
+import Synonyms from "./Synonyms"
 
 export default function Meaning (props) {
     return (
         <div className='meaning-list'>
-            <h4>{props.meaning.partOfSpeech}</h4>
-            <ul className='definition-list'>
-                {props.meaning.definitions.map((item, index) => (
-                    <li key={index}>
-                        <p><em>Definition: </em>{item.definition}</p>
-                        {item.example ? 
-                        (<p><em>Example: </em> {item.example}</p>) 
-                        : null}
-                        {item.synonyms ? 
-                        (<p><em>Synonyms: </em> {item.synonyms.join('; ')}</p>) 
-                        : null}
-                    </li>
-                ))}
-            </ul>
+            <section>
+                <h4>{props.meaning.partOfSpeech}</h4>
+                    {props.meaning.definitions.map((item, index) => (
+                        <li key={index}>
+                            <div className="definition">{item.definition}</div>
+                            {item.example ? 
+                            (<div className="example">{item.example}</div>) 
+                            : null}
+                            {item.synonyms ? 
+                            (<ul> {item.synonyms.map((synonym,index) => 
+                                <Synonyms   key={index} 
+                                            synonym={synonym} 
+                                            clickSynonym={(word) => props.clickSynonym(word)}/>)}</ul>) 
+                            : null}
+                        </li>
+                    ))}
+            </section>
         </div>
     )
 }
