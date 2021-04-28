@@ -5,6 +5,8 @@ This is a dictionary application with these functionalities below:
 1. Search for the meaning, synonyms and relevant images of word typed in
 2. Search for the meaning of synonyms when they get clicked upon
 
+This app is hosted on Netlify, please refer to this link: https://suspicious-meninsky-be0c9e.netlify.app/
+
 ## TL;DR
 
 To get started right away:
